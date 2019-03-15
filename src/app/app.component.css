@@ -1,0 +1,45 @@
+.dashboard-card {
+    max-width: 400px;
+}
+
+.dashboard-card-content {
+}
+
+.example-card {
+    max-width: 400px;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 200px;
+    width: 60%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+
+.custom {
+  background-color: rgb(33, 150, 243);
+}
+
+.search-input {
+  width: 100%;
+  max-width: 594px;
+  background-color: rgba(239,239,239,.54);
+  border-radius: 4px;
+  height: 40px;
+}
+
+.app-search-container {
+  margin-top: -12px;
+  padding-top: 2px;
+  font-size: 16px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}

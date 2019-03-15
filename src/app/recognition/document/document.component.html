@@ -1,0 +1,28 @@
+
+<div class="container">
+<mat-card class="dashboard-card">
+  <mat-card-header>
+    <mat-card-title>Select your image</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+    <input type="file" accept=".png,.jpg" #file />
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="upload(file)" mat-button>UPDATE</button>
+  </mat-card-actions>
+</mat-card>
+
+<h2>Search images</h2>
+<input type="search" matInput value="" placeholder="Class" #query>
+<button (click)="search()" mat-button>
+  <mat-icon matPrefix>search</mat-icon>
+</button>
+
+<mat-form-field class="search-form">
+    <input matInput placeholder="Search Picture" type="text">
+  </mat-form-field>
+  <button button="submit" mat-raised-button color="primary">Search</button>
+  <br>
+<app-image-list *ngIf="showImageResult" [query]="query.value"></app-image-list>
+
+</div>
