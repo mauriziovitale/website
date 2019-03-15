@@ -41,9 +41,6 @@ export class ImageListComponent implements OnChanges {
         return { id, ...data };
       }))
     );
-    this.resultImages.subscribe( (images) => {
-      console.log(images);
-    } )
   }
 
   recognize(item, imageObj) {
@@ -66,8 +63,7 @@ export class ImageListComponent implements OnChanges {
 
   async rec(imageObj) {
     const predictions = await this.recognitionService.detect(imageObj);
-    console.log('Predictions: ');
-    console.log(predictions);
+    console.log('Predictions: ' + predictions);
     let classes: String [] = [];
     predictions.forEach( (obj) => {
       classes.push(obj.class);

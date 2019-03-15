@@ -61,7 +61,6 @@ export class DocumentComponent implements OnInit {
     this.ref.updateMetatdata(imageMetadata);
     this.uploadProgress = this.task.percentageChanges();
     this.uploadProgress.subscribe( (progress) => {
-      console.log(progress);
       if (progress === 100) {
         this.imagesCollection.doc(id).set(tmpImage);
       }

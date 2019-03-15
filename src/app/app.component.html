@@ -1,22 +1,2 @@
 
-<mat-toolbar class="custom">
-    <span>Custom Toolbar</span>
-    <div class="search-input">
-    <div class="app-search-container">
-      <mat-form-field [floatLabel]="'never'" class="example-full-width">
-        <div class="">
-
-        </div>
-          <input type="search" matInput placeholder="" value="">
-          <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
-    </div>
-  </div>
-</mat-toolbar>
-
-
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Home</a>
-  <a routerLink="/recognition" routerLinkActive="active">Recognition</a>
-</nav>
-<router-outlet></router-outlet>
+<app-navigation></app-navigation>

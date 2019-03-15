@@ -18,11 +18,6 @@
   <mat-icon matPrefix>search</mat-icon>
 </button>
 
-<mat-form-field class="search-form">
-    <input matInput placeholder="Search Picture" type="text">
-  </mat-form-field>
-  <button button="submit" mat-raised-button color="primary">Search</button>
-  <br>
 <app-image-list *ngIf="showImageResult" [query]="query.value"></app-image-list>
 
 </div>
