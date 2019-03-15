@@ -1,0 +1,31 @@
+<!--mat-card class="dashboard-card" *ngFor="let item of resultImages | async">
+  <mat-card-header>
+    <mat-card-title>{{item.name}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content">
+      <img [src]="item.fileLocation" width="200" height="150" #img>
+      <p>Classes: {{item.class}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button *ngIf="item.class === ''" (click)="recognize(item, img)" mat-button>Recognize</button>
+  </mat-card-actions>
+</mat-card>
+</div>-->
+
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutGap="0.8%">
+  <mat-card class="card-picture" *ngFor="let item of resultImages | async">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+      <span class="name" fxFlex="90%">{{item.name}}</span>
+      <mat-icon (click)="delete(item.id)" fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image class="img" [src]="item.fileLocation" width="220" height="180" #img>
+    <mat-chip-list>
+      <mat-chip *ngFor="let class of item.class;">{{class}}</mat-chip>
+    </mat-chip-list>
+    <mat-card-actions>
+      <button *ngIf="item.class.length === 0" (click)="recognize(item, img)" mat-button>
+        <mat-icon matPrefix>image_search</mat-icon><span>Recognize</span></button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
