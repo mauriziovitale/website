@@ -19,8 +19,6 @@ const routes: Routes = [
   }
 ];
 
-console.log(firebaseConfig);
-
 @NgModule({
   declarations: [DocumentComponent, ImageListComponent],
   imports: [

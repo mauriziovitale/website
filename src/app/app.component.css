@@ -43,3 +43,31 @@
   padding-left: 15px;
   box-sizing: border-box;
 }
+
+input[type="button"], button {
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+button:focus {
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+}
+
+li {
+  display: contents;
+}
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+main {
+  padding: 10px;
+}
